@@ -9,6 +9,7 @@ require("lazy").setup({
       icons_enabled = true, -- Set to false to disable icons (if no Nerd Font is available)
       pin_plugins = nil, -- Default will pin plugins when tracking `version` of AstroNvim, set to true/false to override
       update_notifications = true, -- Enable/disable notification about running `:Lazy update` twice to update pinned plugins
+      tabstop = 4,
     },
   },
   { import = "community" },
@@ -21,6 +22,9 @@ require("lazy").setup({
     rtp = {
       -- disable some rtp plugins, add more to your liking
       disabled_plugins = {
+        "copilot-lua",
+        "copilot-cmp",
+        "copilot.cmp",
         "gzip",
         "netrwPlugin",
         "tarPlugin",
